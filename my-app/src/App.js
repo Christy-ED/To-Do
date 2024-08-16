@@ -1,12 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import { TodoWrapper } from './components/TodoWrapper';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       <div> To Do List </div>
-      </header>
+
+     <TodoWrapper/>
+     
     </div>
   );
 }
