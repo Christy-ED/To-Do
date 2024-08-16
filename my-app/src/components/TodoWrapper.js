@@ -30,7 +30,11 @@ export const TodoWrapper = () => {
       todo, isEditing: !todo.isEditing} : todo))
   }
 
-  const editTask
+  const editTask = (task, id) => {
+    setTodos(todos.map(todo => todo.id === id ? {...
+      todo, task, isEditing: !todo.isEditing} : todo
+    ))
+  }
   return (
     <div className='TodoWrapper'>
       <h1> To Do List! </h1>
