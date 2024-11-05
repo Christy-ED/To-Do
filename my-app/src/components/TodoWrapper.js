@@ -7,23 +7,22 @@ import { EditTodoForm } from "./EditTodoForm";
 uuidv4();
 
 export const TodoWrapper = () => {
-
-  const[todos, setTodos] = useState([])
+const[todos, setTodos] = useState([]);
   
   const addTodo = todo => {
-    setTodos([...todos, {id: uuidv4(), task: todo, 
-      completed: false, isEditing: false}])
-      console.log(todos)
+    setTodos(
+      [...todos, 
+        {id: uuidv4(), task: todo, 
+      completed: false, isEditing: false},
+    ]);
+      
   }
   
   const toggleComplete = id =>{
-    setTodos(todos.map(todo => todo.id === id ? {
-      ...todo, completed: !todo.completed} : todo))
+    setTodos(todos.filter((todo) => todo.id !== id));
   }
 
-  const deleteTodo = id => {
-    setTodos(todos.filter(todo => todo.id !== id))
-  }
+  const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
 
   const editTodo = id => {
     setTodos(todos.map(todo => todo.id === id ? {...
