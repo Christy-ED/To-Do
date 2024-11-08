@@ -3,16 +3,23 @@ import React, {useState} from 'react'
 export const EditTodoForm = ({editTodo, task}) => {
     const[value, setValue] = useState(task.task)
 
-    const handleSubmit = e => {
-        e.preventDefault(); // prevent the to reload 
+    // const handleChange = e => {
+    //   setTodo(e.target.value);
+    // }
 
-        editTodo(value, task.id);
+    // const handleSubmit = e => {
+    //     e.preventDefault(); // prevent the submit to reload unless we click the submit button.
+    //     props.addNewToo(odo);
+    //     setTodo('');
 
-        setValue("")
-    }
+    // }
+
+    // const clearCompleted = () => {
+    //   props.clearCompleted();
+
+    };
 
 
-    
   return (
     <form className='TodoForm' onSubmit={handleSubmit}>
         <input type="" className='todo-input'
