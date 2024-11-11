@@ -87,3 +87,7 @@ h1 {
 .delete-icon {
   cursor: pointer;
 }
+
+.item.completed{
+  text-declaration: line-through red;
+}

@@ -1,21 +1,21 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
 
 const Todo = props => {
-  const toggleComplete = () => {
-    props.toggleComplete(props.item.id);
+  const toogleCompleted = () => {
+    props.toogleCompleted(props.item.id);
   };
 
-  return (
-    <div className= {` card text-white bg-primary mb-3 item${propsitem.completed? 'completed': ''}`} 
-    style={{width}} 
-    >
-      
 
-    
+  return (
+    <div className= {`card text-white bg-primary mb-3 item${props.item.completed ? 'completed' : ''} `}
+     style={{width: '20dvw', marginTop: '2%'}} onClick={toogleCompleted}>
+      <div className='card-body'>
+      <p className='card-Text'>{props.item.item}</p>
       
       </div>
+
+    </div>
   )
 }
+
+export default Todo;
